@@ -1,2 +1,3 @@
 # tkinter-project
 A mini-project made with the objective of learning how Tkinter works...
+It is only the front end part. I have not applied form validation in it.
