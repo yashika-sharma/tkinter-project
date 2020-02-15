@@ -28,12 +28,12 @@ def database():
     gender=var.get()
     city=c.get()
     guide=var2.get()
-    conn=sqlite3.connect('Form.db')
+    conn=sqlite3.connect('Form1.db')
     with conn:
         cursor=conn.cursor()
-        cursor.execute('CREATE TABLE IF NOT EXISTS Detail (Fullname TEXT,Email TEXT,Age TEXT,Gender TEXT,City TEXT,Guide TEXT)')
-        cursor.execute('insert into Detail (Fullname,Email,Age,Gender,City,Guide) values (?,?,?,?,?,?)',(name1,email,age,gender,city,guide,))
-        conn.commit()
+    cursor.execute('CREATE TABLE IF NOT EXISTS Detail (Fullname TEXT,Email TEXT,Age TEXT,Gender TEXT,City TEXT,Guide TEXT)')
+    cursor.execute('insert into Detail (Fullname,Email,Age,Gender,City,Guide) values (?,?,?,?,?,?)',(name1,email,age,gender,city,guide,))
+    conn.commit()
 
 
 l2=Label(root,text="Full Name",font=("Verdana 20"))
